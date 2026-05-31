@@ -28,6 +28,7 @@ jobs:
       - name: Overlay Yuan Wu site content
         run: |
           cp al-folio-overlay/_config.yml site/_config_yuan.yml
+          rm -rf site/_pages/* site/_posts/* site/_projects/* site/_news/* site/_bibliography/* site/_books/*
           rsync -av --exclude '_config.yml' al-folio-overlay/ site/
           mkdir -p site/assets/img
           cp assets/profile.png site/assets/img/profile.png
