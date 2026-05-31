@@ -1,0 +1,62 @@
+title: Yuan Wu
+first_name: Yuan
+middle_name:
+last_name: Wu
+description: Associate Professor at the School of Artificial Intelligence, Jilin University. Research in NLP, large language models, LLM evaluation, and post-training.
+footer_text: >
+  © Yuan Wu. Powered by <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
+keywords: natural language processing, large language models, LLM evaluation, LLM post-training, trustworthy AI
+lang: en
+
+url: "https://yuanwu3.github.io"
+baseurl: ""
+repository: YuanWu3/YuanWu3.github.io
+
+navbar_fixed: true
+footer_fixed: false
+search_enabled: true
+max_width: 930px
+
+profile:
+  align: right
+  image: profile.png
+  image_circular: false
+  more_info: >
+    <p>School of Artificial Intelligence</p>
+    <p>Jilin University</p>
+
+email: yuanwu@jlu.edu.cn
+scholar_userid: KVeRu2QAAAAJ
+linkedin_username: yuan-wu-953208150
+github_username: YuanWu3
+
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+scholar:
+  style: apa
+  locale: en
+  sort_by: year
+  order: descending
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+
+selected_papers: true
+enable_darkmode: true
+enable_navbar_social: true
+enable_google_analytics: false
+enable_cronitor_analytics: false
+enable_pirsch_analytics: false
+
+blog_name: Blog
+blog_description: notes on research and teaching
+pagination:
+  enabled: true
