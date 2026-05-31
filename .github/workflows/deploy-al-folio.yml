@@ -73,6 +73,21 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
+      - name: Inject custom CSS
+        working-directory: site
+        run: |
+          mkdir -p _site/assets/css
+          cp assets/css/yuan-custom.css _site/assets/css/yuan-custom.css
+          python3 - <<'PY'
+          from pathlib import Path
+          tag = '<link rel="stylesheet" href="/assets/css/yuan-custom.css">'
+          for html in Path('_site').rglob('*.html'):
+              text = html.read_text(encoding='utf-8')
+              if tag not in text and '</head>' in text:
+                  text = text.replace('</head>', f'  {tag}\n</head>')
+              html.write_text(text, encoding='utf-8')
+          PY
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
