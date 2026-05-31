@@ -73,13 +73,15 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      - name: Inject custom sidebar and CSS
+      - name: Inject custom sidebar, CSS, and authorship markers
         working-directory: site
         run: |
           mkdir -p _site/assets/css
           cp assets/css/yuan-custom.css _site/assets/css/yuan-custom.css
           python3 - <<'PY'
           from pathlib import Path
+          import re
+
           css_tag = '<link rel="stylesheet" href="/assets/css/yuan-custom.css">'
           sidebar = '''<aside class="yuan-sidebar" aria-label="Site navigation">
             <div class="yuan-sidebar-name">Yuan Wu</div>
@@ -96,6 +98,72 @@ jobs:
               <a href="https://scholar.google.com/citations?user=KVeRu2QAAAAJ" aria-label="Google Scholar">Scholar</a>
             </div>
           </aside>'''
+
+          markers = {
+              'Dual Adversarial Co-Learning for Multi-Domain Text Classification': '*',
+              'Dual Mixup Regularized Learning for Adversarial Domain Adaptation': '*',
+              'Mixup Regularized Adversarial Networks for Multi-Domain Text Classification': '*',
+              'Towards Category and Domain Alignment: Category-Invariant Feature Enhancement for Adversarial Domain Adaptation': '*',
+              'Conditional Adversarial Networks for Multi-Domain Text Classification': '*',
+              'Co-Regularized Adversarial Learning for Multi-Domain Text Classification': '*',
+              'Maximum Batch Frobenius Norm for Multi-Domain Text Classification': '*',
+              'A Survey on Evaluation of Large Language Models': '+',
+              'Regularized Conditional Alignment for Multi-Domain Text Classification': '+',
+              'NegativePrompt: Leveraging Psychology for Large Language Models Enhancement via Negative Emotional Stimuli': '+',
+              'A Survey on Data Augmentation in Large Model Era': '+',
+              'Language Models can Evaluate Themselves via Probability Discrepancy': '+',
+              'Margin Discrepancy-Based Adversarial Training for Multi-Domain Text Classification': '*+',
+              'StructFlowBench: A Structured Flow Benchmark for Multi-Turn Instruction Following': '+',
+              'A Survey of RWKV': '+',
+              'Selective Fine-Tuning for Large Language Models via Matrix Nuclear Norm': '+',
+              'Rethinking Data Selection at Scale: Random Selection is Almost All You Need': '+',
+              'Large Language Model Evaluation via Matrix Nuclear-Norm': '+',
+              'LoRA-MGPO: Mitigating Double Descent in Low-Rank Adaptation via Momentum-Guided Perturbation Optimization': '+',
+              'NLoRA: Nystrom-Initiated Low-Rank Adaptation for Large Language Models': '+',
+              'R-LoRA: Random Initialization of Multi-Head LoRA for Multi-Task Learning': '+',
+              "Don't Take the Premise for Granted: Evaluating the Premise Critique Ability of Large Language Models": '+',
+              'Asymmetric Co-Training for Source-Free Few-Shot Domain Adaptation': '+',
+              'BA-LoRA: Bias-Alleviating Low-Rank Adaptation to Mitigate Catastrophic Inheritance in Large Language Models': '+',
+              'BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards': '+',
+              'SOS-LoRA: Static Orthogonal-Subspace Low-Rank Adaptation with Fixed Multi-Scale Scaling': '+',
+              'A Survey of Retentive Network': '+',
+              'AGGC: Adaptive Group Gradient Clipping for Stabilizing Large Language Model Training': '+',
+          }
+
+          def mark_yuan_in_segment(segment, marker):
+              replacement = f'<strong>Yuan Wu</strong><sup>{marker}</sup>'
+              patterns = [
+                  r'<em>\s*Yuan\s+Wu\s*</em>',
+                  r'<i>\s*Yuan\s+Wu\s*</i>',
+                  r'<span([^>]*)>\s*Yuan\s+Wu\s*</span>',
+                  r'(?<![>\w])Yuan\s+Wu(?![<\w])',
+              ]
+              for pat in patterns:
+                  new_segment, n = re.subn(pat, replacement, segment, count=1, flags=re.I)
+                  if n:
+                      return new_segment
+              return segment
+
+          def apply_author_marks(text):
+              for title, marker in markers.items():
+                  idx = text.find(title)
+                  if idx == -1:
+                      continue
+                  start = text.rfind('<li', 0, idx)
+                  end = text.find('</li>', idx)
+                  if start == -1 or end == -1:
+                      start = max(0, idx - 1500)
+                      end = min(len(text), idx + 2500)
+                  else:
+                      end += len('</li>')
+                  segment = text[start:end]
+                  if 'yuan-author-marker' in segment:
+                      continue
+                  marked = mark_yuan_in_segment(segment, marker)
+                  marked = marked.replace('<sup>' + marker + '</sup>', '<sup class="yuan-author-marker">' + marker + '</sup>', 1)
+                  text = text[:start] + marked + text[end:]
+              return text
+
           for html in Path('_site').rglob('*.html'):
               text = html.read_text(encoding='utf-8')
               if css_tag not in text and '</head>' in text:
@@ -104,6 +172,7 @@ jobs:
                   body_end = text.find('>', text.find('<body'))
                   if body_end != -1:
                       text = text[:body_end + 1] + '\n' + sidebar + text[body_end + 1:]
+              text = apply_author_marks(text)
               html.write_text(text, encoding='utf-8')
           PY
 
