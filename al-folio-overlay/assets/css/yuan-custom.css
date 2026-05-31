@@ -113,6 +113,106 @@ nav.navbar {
   }
 }
 
+/* Publication page: align numbers and entries more cleanly. */
+ol.bibliography {
+  list-style: none !important;
+  counter-reset: publication-counter;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+ol.bibliography > li {
+  counter-increment: publication-counter;
+  display: grid !important;
+  grid-template-columns: 3.2rem minmax(0, 1fr);
+  column-gap: 1.2rem;
+  align-items: start;
+  margin: 0 0 1.35rem 0 !important;
+  padding: 0 !important;
+}
+
+ol.bibliography > li::before {
+  content: counter(publication-counter) ".";
+  grid-column: 1;
+  text-align: right;
+  color: var(--global-text-color, #111);
+  line-height: 1.45;
+  padding-top: 0.05rem;
+}
+
+ol.bibliography > li > * {
+  grid-column: 2;
+  min-width: 0;
+}
+
+ol.bibliography abbr,
+ol.bibliography .abbr,
+ol.bibliography .badge {
+  display: none !important;
+}
+
+ol.bibliography .title {
+  display: inline !important;
+  font-weight: 500;
+  color: var(--global-text-color, #111);
+}
+
+ol.bibliography .author,
+ol.bibliography .periodical {
+  margin-top: 0.15rem;
+}
+
+ol.bibliography .links,
+ol.bibliography .btn-links,
+ol.bibliography .badges,
+ol.bibliography .biblinks {
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0 0.55rem !important;
+  vertical-align: baseline;
+}
+
+ol.bibliography .links a,
+ol.bibliography .btn-links a,
+ol.bibliography .biblinks a,
+ol.bibliography a.btn,
+ol.bibliography button.btn {
+  display: inline-flex !important;
+  align-items: center;
+  min-height: auto !important;
+  padding: 0 0.35rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--global-theme-color, #b509ac) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.3 !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
+
+ol.bibliography a.btn::before,
+ol.bibliography .links::before,
+ol.bibliography .btn-links::before,
+ol.bibliography .biblinks::before {
+  content: "";
+}
+
+@media (max-width: 767px) {
+  ol.bibliography > li {
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+    column-gap: 0.8rem;
+  }
+
+  ol.bibliography .links,
+  ol.bibliography .btn-links,
+  ol.bibliography .badges,
+  ol.bibliography .biblinks {
+    display: flex !important;
+    margin: 0.25rem 0 0 0 !important;
+  }
+}
+
 /* Hide RSS and default custom social icons if the upstream theme leaves them in the rendered page. */
 a[href$="/feed.xml"],
 a[title="RSS Feed"],
