@@ -27,7 +27,8 @@ jobs:
 
       - name: Overlay Yuan Wu site content
         run: |
-          rsync -av al-folio-overlay/ site/
+          cp al-folio-overlay/_config.yml site/_config_yuan.yml
+          rsync -av --exclude '_config.yml' al-folio-overlay/ site/
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -41,7 +42,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build --trace
+          bundle exec jekyll build --config _config.yml,_config_yuan.yml --trace
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
