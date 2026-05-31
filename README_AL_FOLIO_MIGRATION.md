@@ -21,6 +21,10 @@ This avoids copying the full al-folio codebase into the personal homepage reposi
 
 Go to **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**. Then run the `Deploy al-folio academic homepage` workflow manually once, or push another commit to `main`.
 
+## Deployment trigger
+
+A follow-up commit can be used to trigger the workflow after GitHub Pages is configured to use GitHub Actions.
+
 ## Notes
 
 The old `index.html` and `styles.css` are intentionally kept as a fallback. Once the al-folio deployment is verified, they can be removed in a follow-up cleanup PR.
