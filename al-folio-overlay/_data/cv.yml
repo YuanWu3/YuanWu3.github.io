@@ -1,0 +1,23 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Yuan Wu
+    - name: Position
+      value: Associate Professor, School of Artificial Intelligence, Jilin University
+    - name: Email
+      value: yuanwu@jlu.edu.cn
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Large Language Models
+      items:
+        - LLM evaluation and benchmarking
+        - LLM post-training and parameter-efficient fine-tuning
+        - Trustworthy and reliable language models
+    - title: Natural Language Processing
+      items:
+        - Domain adaptation
+        - Instruction following
+        - Model self-evaluation
