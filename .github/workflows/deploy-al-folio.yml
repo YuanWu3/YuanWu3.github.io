@@ -33,16 +33,42 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          ruby-version: "3.3.5"
           bundler-cache: true
           working-directory: site
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install JavaScript dependencies
+        working-directory: site
+        run: npm ci
 
       - name: Build with Jekyll
         working-directory: site
         env:
           JEKYLL_ENV: production
         run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
           bundle exec jekyll build --config _config.yml,_config_yuan.yml --trace
+
+      - name: Purge unused CSS
+        working-directory: site
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
