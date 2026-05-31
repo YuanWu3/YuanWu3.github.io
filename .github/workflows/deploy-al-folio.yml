@@ -73,18 +73,38 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      - name: Inject custom CSS
+      - name: Inject custom sidebar and CSS
         working-directory: site
         run: |
           mkdir -p _site/assets/css
           cp assets/css/yuan-custom.css _site/assets/css/yuan-custom.css
           python3 - <<'PY'
           from pathlib import Path
-          tag = '<link rel="stylesheet" href="/assets/css/yuan-custom.css">'
+          css_tag = '<link rel="stylesheet" href="/assets/css/yuan-custom.css">'
+          sidebar = '''<aside class="yuan-sidebar" aria-label="Site navigation">
+            <div class="yuan-sidebar-name">Yuan Wu</div>
+            <div class="yuan-sidebar-title">Associate Professor<br>School of Artificial Intelligence<br>Jilin University</div>
+            <nav class="yuan-sidebar-links">
+              <a href="/">About</a>
+              <a href="/publications/">Publications</a>
+              <a href="/team/">Team</a>
+              <a href="/teaching/">Teaching</a>
+              <a href="/cv/">CV</a>
+              <a href="/service/">Service</a>
+            </nav>
+            <div class="yuan-sidebar-tools">
+              <a href="mailto:yuanwu@jlu.edu.cn" aria-label="Email">Email</a>
+              <a href="https://scholar.google.com/citations?user=KVeRu2QAAAAJ" aria-label="Google Scholar">Scholar</a>
+            </div>
+          </aside>'''
           for html in Path('_site').rglob('*.html'):
               text = html.read_text(encoding='utf-8')
-              if tag not in text and '</head>' in text:
-                  text = text.replace('</head>', f'  {tag}\n</head>')
+              if css_tag not in text and '</head>' in text:
+                  text = text.replace('</head>', f'  {css_tag}\n</head>')
+              if 'class="yuan-sidebar"' not in text and '<body' in text:
+                  body_end = text.find('>', text.find('<body'))
+                  if body_end != -1:
+                      text = text[:body_end + 1] + '\n' + sidebar + text[body_end + 1:]
               html.write_text(text, encoding='utf-8')
           PY
 
