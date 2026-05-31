@@ -1,95 +1,116 @@
 /* Yuan Wu homepage custom layout tweaks. */
 
+/* Hide the upstream al-folio top navigation completely. We inject a stable
+   custom sidebar after the site is built, so this avoids Bootstrap collapse
+   conflicts and template demo navigation leftovers. */
+header,
+.navbar,
+nav.navbar {
+  display: none !important;
+}
+
+.yuan-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  padding: 32px 24px;
+  border-right: 1px solid var(--global-divider-color, #e5e5e5);
+  background: var(--global-bg-color, #fff);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.yuan-sidebar-name {
+  margin: 0 0 6px 0;
+  color: var(--global-text-color, #111);
+  font-size: 1.45rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.yuan-sidebar-title {
+  margin: 0 0 26px 0;
+  color: var(--global-text-color-light, #555);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.yuan-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.yuan-sidebar-links a {
+  display: block;
+  color: var(--global-text-color, #111);
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  padding: 3px 0;
+}
+
+.yuan-sidebar-links a:hover,
+.yuan-sidebar-links a:focus {
+  color: var(--global-theme-color, #b509ac);
+  text-decoration: none;
+}
+
+.yuan-sidebar-tools {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
 @media (min-width: 992px) {
   body {
     padding-left: 230px;
-  }
-
-  header,
-  .navbar,
-  nav.navbar {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 210px;
-    height: 100vh;
-    z-index: 1030;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    padding: 28px 18px !important;
-    border-right: 1px solid var(--global-divider-color, #e5e5e5);
-    border-bottom: 0 !important;
-    background: var(--global-bg-color, #fff) !important;
-  }
-
-  .navbar .container,
-  .navbar .container-fluid {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .navbar-brand,
-  .navbar .navbar-brand {
-    margin: 0 0 22px 0 !important;
-    padding: 0 !important;
-    font-size: 1.2rem !important;
-    line-height: 1.25;
-    white-space: normal !important;
-  }
-
-  .navbar-collapse,
-  .navbar .navbar-collapse {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100%;
-  }
-
-  .navbar-nav,
-  .navbar .navbar-nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100%;
-    margin: 0 !important;
-  }
-
-  .navbar-nav .nav-item,
-  .navbar-nav .nav-link {
-    width: 100%;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 6px 0 !important;
-    font-size: 0.92rem;
-  }
-
-  .navbar .navbar-toggler {
-    display: none !important;
   }
 
   main,
   .container,
   .post,
   .page-content {
-    max-width: 1040px;
+    max-width: 1040px !important;
   }
 }
 
-/* Hide default al-folio demo navigation entries that remain from the theme. */
-a.nav-link[href*="/blog/"],
-a.nav-link[href*="/projects/"],
-a.nav-link[href*="/repositories/"],
-a.nav-link[href*="/people/"],
-a.nav-link[href*="/submenus/"],
-a.nav-link[href*="/cv/"] {
-  display: none !important;
+@media (max-width: 991px) {
+  body {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .yuan-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 20px 24px 14px;
+    border-right: 0;
+    border-bottom: 1px solid var(--global-divider-color, #e5e5e5);
+  }
+
+  .yuan-sidebar-title {
+    margin-bottom: 14px;
+  }
+
+  .yuan-sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .yuan-sidebar-tools {
+    display: none;
+  }
 }
 
 /* Hide RSS and default custom social icons if the upstream theme leaves them in the rendered page. */
@@ -102,7 +123,6 @@ a[href*="alberteinstein.com"] {
   display: none !important;
 }
 
-/* Make the footer cleaner and aligned with the content area. */
 footer {
   font-size: 0.85rem;
 }
