@@ -29,6 +29,8 @@ jobs:
         run: |
           cp al-folio-overlay/_config.yml site/_config_yuan.yml
           rsync -av --exclude '_config.yml' al-folio-overlay/ site/
+          mkdir -p site/assets/img
+          cp assets/profile.png site/assets/img/profile.png
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
