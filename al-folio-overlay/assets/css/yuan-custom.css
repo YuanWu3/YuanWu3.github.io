@@ -1,0 +1,108 @@
+/* Yuan Wu homepage custom layout tweaks. */
+
+@media (min-width: 992px) {
+  body {
+    padding-left: 230px;
+  }
+
+  header,
+  .navbar,
+  nav.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 100vh;
+    z-index: 1030;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 28px 18px !important;
+    border-right: 1px solid var(--global-divider-color, #e5e5e5);
+    border-bottom: 0 !important;
+    background: var(--global-bg-color, #fff) !important;
+  }
+
+  .navbar .container,
+  .navbar .container-fluid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .navbar-brand,
+  .navbar .navbar-brand {
+    margin: 0 0 22px 0 !important;
+    padding: 0 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.25;
+    white-space: normal !important;
+  }
+
+  .navbar-collapse,
+  .navbar .navbar-collapse {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+
+  .navbar-nav,
+  .navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-nav .nav-item,
+  .navbar-nav .nav-link {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 6px 0 !important;
+    font-size: 0.92rem;
+  }
+
+  .navbar .navbar-toggler {
+    display: none !important;
+  }
+
+  main,
+  .container,
+  .post,
+  .page-content {
+    max-width: 1040px;
+  }
+}
+
+/* Hide default al-folio demo navigation entries that remain from the theme. */
+a.nav-link[href*="/blog/"],
+a.nav-link[href*="/projects/"],
+a.nav-link[href*="/repositories/"],
+a.nav-link[href*="/people/"],
+a.nav-link[href*="/submenus/"],
+a.nav-link[href*="/cv/"] {
+  display: none !important;
+}
+
+/* Hide RSS and default custom social icons if the upstream theme leaves them in the rendered page. */
+a[href$="/feed.xml"],
+a[title="RSS Feed"],
+a[aria-label="RSS Feed"],
+a[title="Custom Social"],
+a[aria-label="Custom Social"],
+a[href*="alberteinstein.com"] {
+  display: none !important;
+}
+
+/* Make the footer cleaner and aligned with the content area. */
+footer {
+  font-size: 0.85rem;
+}
