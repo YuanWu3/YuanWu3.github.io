@@ -40,6 +40,6 @@ nav_order: 3
 - **Xu Wang** — Former Master student, 2022–2025; 1 TIST, 1 IJCAI; current position: LLM algorithm engineer at Meituan.
 - **Gengxu Li** — Former Master student, 2022–2025; 1 EMNLP, 1 PRCV; current position: Ph.D. student at Jilin University.
 - **Tingyu Xia** — Former Ph.D. student, 2021–2025; 1 ACL, 2 EMNLP, 1 Neurocomputing, 1 Information Processing & Management; current position: LLM algorithm engineer at Tongyi Lab.
-- **Yahan Li** — Former Master student, 2023–2026; 1 EMNLP, 1 Information Processing & Management; current position: LLM algorithm engineer at TeleAI.
+- **Yahan Li** — Former Master student, 2023–2026; 1 EMNLP; current position: LLM algorithm engineer at TeleAI.
 - **Chenlu Guo** — Former Master student, 2023–2026; 1 EMNLP; current position: LLM algorithm engineer at BiliBili.
 - **Jinda Liu** — Former undergraduate student, 2022–2026; 1 EMNLP; current position: Master student at SUSTech.
