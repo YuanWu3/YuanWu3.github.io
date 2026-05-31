@@ -121,7 +121,7 @@ jobs:
               'LoRA-MGPO: Mitigating Double Descent in Low-Rank Adaptation via Momentum-Guided Perturbation Optimization': '+',
               'NLoRA: Nystrom-Initiated Low-Rank Adaptation for Large Language Models': '+',
               'R-LoRA: Random Initialization of Multi-Head LoRA for Multi-Task Learning': '+',
-              "Don't Take the Premise for Granted: Evaluating the Premise Critique Ability of Large Language Models": '+',
+              'Premise Critique Ability': '+',
               'Asymmetric Co-Training for Source-Free Few-Shot Domain Adaptation': '+',
               'BA-LoRA: Bias-Alleviating Low-Rank Adaptation to Mitigate Catastrophic Inheritance in Large Language Models': '+',
               'BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards': '+',
