@@ -1,10 +1,10 @@
 title: Yuan Wu
 first_name: Yuan
-middle_name:
+middle_name: ""
 last_name: Wu
 description: Associate Professor at the School of Artificial Intelligence, Jilin University. Research in NLP, large language models, LLM evaluation, and post-training.
 footer_text: >
-  © Yuan Wu. Powered by <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
+  Powered by <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
 keywords: natural language processing, large language models, LLM evaluation, LLM post-training, trustworthy AI
 lang: en
 
