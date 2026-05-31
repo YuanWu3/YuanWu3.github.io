@@ -11,18 +11,18 @@ nav_order: 3
 
 ### Ph.D. Students
 
-- **Bo Cheng** — Ph.D. student, 2021–2026, co-supervised with Prof. Yi Chang. Publications include AAAI, TNNLS, and CVPR.
-- **Jinnan Li** — Ph.D. student, 2023–, co-supervised with Prof. Yi Chang. Publications include ACL.
-- **Yupeng Chang** — Ph.D. student, 2023–. Publications include TIST, EMNLP, ICLR, and ACL.
+- **Bo Cheng** — Ph.D. student, 2021–2026, co-supervised with Prof. Yi Chang; 1 AAAI, 1 TNNLS, 1 CVPR.
+- **Jinnan Li** — Ph.D. student, 2023–, co-supervised with Prof. Yi Chang; 1 ACL.
+- **Yupeng Chang** — Ph.D. student, 2023–; 1 TIST, 1 EMNLP, 1 ICLR, 2 ACL.
 - **Yue Zhou** — Ph.D. student, 2024–.
-- **Gengxu Li** — Ph.D. student, 2025–. Publications include EMNLP and PRCV.
-- **Jinzhe Li** — Ph.D. student, 2025–, co-supervised with Prof. Yi Chang. Publications include ACL and EMNLP.
+- **Gengxu Li** — Ph.D. student, 2025–; 1 EMNLP, 1 PRCV.
+- **Jinzhe Li** — Ph.D. student, 2025–, co-supervised with Prof. Yi Chang; 1 ACL, 1 EMNLP.
 - **Yuxing Cheng** — Ph.D. student, 2026–, co-supervised with Prof. Yi Chang.
 
 ### Master Students
 
-- **Zhiyuan Li** — Master student, 2024–. Publications include Neurocomputing and ACL.
-- **Haiqi Yang** — Master student, 2024–. Publications include ACL.
+- **Zhiyuan Li** — Master student, 2024–; 1 Neurocomputing, 1 ACL.
+- **Haiqi Yang** — Master student, 2024–; 1 ACL.
 - **Jialin Li** — Master student, 2024–.
 - **Linyuan Gao** — Master student, 2025–.
 - **Liyu Hou** — Master student, 2025–.
