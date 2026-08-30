@@ -113,6 +113,64 @@ nav.navbar {
   }
 }
 
+/* Homepage News section. */
+.yuan-news-box {
+  max-height: 260px;
+  overflow-y: auto;
+  margin: 0.75rem 0 2rem 0;
+  padding: 0.25rem 1.25rem 0.25rem 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+  scrollbar-width: auto;
+}
+
+.yuan-news-box::-webkit-scrollbar {
+  width: 10px;
+}
+
+.yuan-news-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.yuan-news-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+}
+
+.yuan-news-item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  column-gap: 1.75rem;
+  align-items: start;
+  padding: 0.55rem 0;
+}
+
+.yuan-news-date {
+  font-weight: 700;
+  color: var(--global-text-color, #111);
+  white-space: nowrap;
+}
+
+.yuan-news-text {
+  color: var(--global-text-color, #111);
+  line-height: 1.45;
+}
+
+@media (max-width: 767px) {
+  .yuan-news-box {
+    max-height: 280px;
+    padding-right: 0.75rem;
+  }
+
+  .yuan-news-item {
+    grid-template-columns: 1fr;
+    row-gap: 0.15rem;
+  }
+
+  .yuan-news-date {
+    white-space: normal;
+  }
+}
+
 /* Publication page: align numbers and entries more cleanly. */
 ol.bibliography {
   list-style: none !important;
