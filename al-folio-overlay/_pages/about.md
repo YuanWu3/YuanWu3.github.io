@@ -35,31 +35,23 @@ My group studies reliable, efficient, and trustworthy methods for building and e
 
 <div class="yuan-news-box" aria-label="News">
   <div class="yuan-news-item">
-    <div class="yuan-news-date">Aug 14, 2026</div>
-    <div class="yuan-news-text">Invited to be an Area Chair for ICLR 2027.</div>
+    <div class="yuan-news-date">Aug, 2026</div>
+    <div class="yuan-news-text">6 papers have been accepted to EMNLP 2026.</div>
   </div>
   <div class="yuan-news-item">
-    <div class="yuan-news-date">Jul 24, 2026</div>
-    <div class="yuan-news-text">Invited to be an Area Chair for ACML 2026.</div>
+    <div class="yuan-news-date">Apr, 2026</div>
+    <div class="yuan-news-text">4 papers have been accepted to ACL 2026.</div>
   </div>
   <div class="yuan-news-item">
-    <div class="yuan-news-date">Jul 23, 2026</div>
-    <div class="yuan-news-text">Invited to be an Area Chair for AAAI 2027.</div>
+    <div class="yuan-news-date">Jan, 2026</div>
+    <div class="yuan-news-text">1 paper has been accepted to ICLR 2026.</div>
   </div>
   <div class="yuan-news-item">
-    <div class="yuan-news-date">Jul 09, 2026</div>
-    <div class="yuan-news-text">One paper on personalized safety of VLMs is accepted by COLM 2026. Congrats!</div>
+    <div class="yuan-news-date">Aug, 2025</div>
+    <div class="yuan-news-text">6 papers have been accepted to EMNLP 2025.</div>
   </div>
   <div class="yuan-news-item">
-    <div class="yuan-news-date">Jun 20, 2026</div>
-    <div class="yuan-news-text">One paper is accepted by ECCV 2026. Congrats!</div>
-  </div>
-  <div class="yuan-news-item">
-    <div class="yuan-news-date">Jun 08, 2026</div>
-    <div class="yuan-news-text">Our paper, FedUMM, received the <strong>Best Student Paper Award</strong> at WWW’26 FL workshop!</div>
-  </div>
-  <div class="yuan-news-item">
-    <div class="yuan-news-date">Jun 08, 2026</div>
-    <div class="yuan-news-text">We received the <em>Gemini Academic Research Award</em>!</div>
+    <div class="yuan-news-date">Apr, 2025</div>
+    <div class="yuan-news-text">1 paper has been accepted to ACL 2025.</div>
   </div>
 </div>
