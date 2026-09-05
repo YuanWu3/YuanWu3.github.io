@@ -31,7 +31,11 @@ jobs:
           rm -rf site/_pages/* site/_posts/* site/_projects/* site/_news/* site/_bibliography/* site/_books/*
           rsync -av --exclude '_config.yml' al-folio-overlay/ site/
           mkdir -p site/assets/img
-          cp assets/profile.png site/assets/img/profile.png
+          if [ -f al-folio-overlay/assets/img/profile_new.jpg.b64 ]; then
+            base64 -d al-folio-overlay/assets/img/profile_new.jpg.b64 > site/assets/img/profile.png
+          else
+            cp assets/profile.png site/assets/img/profile.png
+          fi
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -164,6 +168,11 @@ jobs:
                   text = text[:start] + marked + text[end:]
               return text
 
+          default_notes = [
+              'You can even add a little note about which of these is the best way to reach you.',
+              '<p>You can even add a little note about which of these is the best way to reach you.</p>',
+          ]
+
           for html in Path('_site').rglob('*.html'):
               text = html.read_text(encoding='utf-8')
               if css_tag not in text and '</head>' in text:
@@ -172,6 +181,8 @@ jobs:
                   body_end = text.find('>', text.find('<body'))
                   if body_end != -1:
                       text = text[:body_end + 1] + '\n' + sidebar + text[body_end + 1:]
+              for note in default_notes:
+                  text = text.replace(note, '')
               text = apply_author_marks(text)
               html.write_text(text, encoding='utf-8')
           PY
