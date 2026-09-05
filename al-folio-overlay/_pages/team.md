@@ -11,13 +11,12 @@ nav_order: 3
 
 ### Ph.D. Students
 
-- **Bo Cheng** — Ph.D. student, 2021–2026, co-supervised with Prof. Yi Chang; 1 AAAI, 1 TNNLS, 1 CVPR.
 - **Jinnan Li** — Ph.D. student, 2023–, co-supervised with Prof. Yi Chang; 1 ACL.
 - **Yupeng Chang** — Ph.D. student, 2023–; 1 TIST, 1 EMNLP, 1 ICLR, 2 ACL.
-- **Yue Zhou** — Ph.D. student, 2024–.
-- **Gengxu Li** — Ph.D. student, 2025–; 1 EMNLP, 1 PRCV.
-- **Jinzhe Li** — Ph.D. student, 2025–, co-supervised with Prof. Yi Chang; 1 ACL, 1 EMNLP.
-- **Yuxing Cheng** — Ph.D. student, 2026–, co-supervised with Prof. Yi Chang.
+- **Yue Zhou** — Ph.D. student, 2024–; 1 EMNLP.
+- **Gengxu Li** — Ph.D. student, 2025–; 2 EMNLP, 1 PRCV.
+- **Jinzhe Li** — Ph.D. student, 2025–, co-supervised with Prof. Yi Chang; 1 ACL, 2 EMNLP.
+- **Yuxing Cheng** — Ph.D. student, 2026–, co-supervised with Prof. Yi Chang; 1 EMNLP.
 
 ### Master Students
 
@@ -30,11 +29,12 @@ nav_order: 3
 ### Undergraduate Students
 
 - **Qian Cha** — Undergraduate student, 2023–.
-- **Huangchen Xu** — Undergraduate student, 2024–.
+- **Huangchen Xu** — Undergraduate student, 2024–; 1 EMNLP.
 - **Yishan Zheng** — Undergraduate student, 2024–.
 
 ## Alumni
 
+- **Bo Cheng** — Former Ph.D. student, 2021–2026, co-supervised with Prof. Yi Chang; 1 AAAI, 1 TNNLS, 1 CVPR; current position: LLM algorithm engineer at Shanghai AI Lab.
 - **Rui Wang** — Former Master student, 2021–2024; 1 SIGGRAPH Asia Poster; current position: Ph.D. student at Beihang University.
 - **Juntao Hu** — Former Master student, 2021–2024; 1 ICASSP; current position: Program engineer at ByteDance.
 - **Xu Wang** — Former Master student, 2022–2025; 1 TIST, 1 IJCAI; current position: LLM algorithm engineer at Meituan.
@@ -42,4 +42,4 @@ nav_order: 3
 - **Tingyu Xia** — Former Ph.D. student, 2021–2025; 1 WWW, 1 ACL, 2 EMNLP, 1 Neurocomputing, 1 Information Processing & Management; current position: LLM algorithm engineer at Tongyi Lab.
 - **Yahan Li** — Former Master student, 2023–2026; 1 EMNLP; current position: LLM algorithm engineer at TeleAI.
 - **Chenlu Guo** — Former Master student, 2023–2026; 1 EMNLP; current position: LLM algorithm engineer at BiliBili.
-- **Jinda Liu** — Former undergraduate student, 2022–2026; 1 EMNLP; current position: Master student at SUSTech.
+- **Jinda Liu** — Former undergraduate student, 2022–2026; 2 EMNLP; current position: Master student at SUSTech.
