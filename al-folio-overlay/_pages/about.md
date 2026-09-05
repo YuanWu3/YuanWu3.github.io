@@ -61,7 +61,7 @@ My group studies reliable, efficient, and trustworthy methods for building and e
 6. **[How Robust is OCR-Reasoning? Evaluating OCR-Reasoning Robustness of Vision-Language Models under Visual Perturbations](https://arxiv.org/abs/2606.26041)**  
    Yuxing Cheng, **Yuan Wu**+, and Yi Chang  
    *In EMNLP, 2026*  
-   [HTML](https://arxiv.org/abs/2606.26041)
+   [HTML](https://arxiv.org/abs/2606.26041) · [Code](https://github.com/pasterinjlu/OCR-Reasoning-Robust)
 
 ## News
 
