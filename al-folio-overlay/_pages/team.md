@@ -17,6 +17,7 @@ nav_order: 3
 - **Gengxu Li** — Ph.D. student, 2025–; 2 EMNLP, 1 PRCV.
 - **Jinzhe Li** — Ph.D. student, 2025–, co-supervised with Prof. Yi Chang; 1 ACL, 2 EMNLP.
 - **Yuxing Cheng** — Ph.D. student, 2026–, co-supervised with Prof. Yi Chang; 1 EMNLP.
+- **Yezhaohui Wang** — Ph.D. student, 2026–.
 
 ### Master Students
 
@@ -25,6 +26,8 @@ nav_order: 3
 - **Jialin Li** — Master student, 2024–.
 - **Linyuan Gao** — Master student, 2025–.
 - **Liyu Hou** — Master student, 2025–.
+- **Yibo Wei** — Master student, 2026–.
+- **Shuo Lin** — Master student, 2026–.
 
 ### Undergraduate Students
 
