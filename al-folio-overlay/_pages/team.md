@@ -32,8 +32,14 @@ nav_order: 3
 ### Undergraduate Students
 
 - **Qian Cha** — Undergraduate student, 2023–.
+- **Zhongru Chen** — Undergraduate student, 2023–.
 - **Huangchen Xu** — Undergraduate student, 2024–; 1 EMNLP.
 - **Yishan Zheng** — Undergraduate student, 2024–.
+- **Zheyu Xie** — Undergraduate student, 2024–.
+- **Dongxu Liu** — Undergraduate student, 2024–.
+- **Zewen Jiang** — Undergraduate student, 2024–.
+- **Tianxiang Gao** — Undergraduate student, 2024–.
+- **Chunkai Huang** — Undergraduate student, 2024–.
 
 ## Alumni
 
