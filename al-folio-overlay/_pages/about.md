@@ -23,7 +23,7 @@ I received my Bachelor degree from Beijing University of Chemical Technology, my
 
 My group studies reliable, efficient, and trustworthy methods for building and evaluating large language models. I welcome inquiries from undergraduate and graduate students interested in natural language processing, LLM evaluation, post-training, domain adaptation, and trustworthy AI.
 
-欢迎985高校本科生咨询保研、直博项目，有优惠政策。
+<p style="font-size: 1.5em; font-weight: 700;"><strong>欢迎985高校本科生咨询保研、直博项目，有优惠政策。</strong></p>
 
 ## Research Interests
 
