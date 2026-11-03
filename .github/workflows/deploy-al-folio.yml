@@ -133,7 +133,13 @@ jobs:
               'A Survey of Retentive Network': '+',
               'AGGC: Adaptive Group Gradient Clipping for Stabilizing Large Language Model Training': '+',
               'CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval': '+',
-              'What if LLMs Ate Their Words: Causal History Effects in Multi-Turn Interaction': '',
+              'What if LLMs Ate Their Words: Causal History Effects in Multi-Turn Interaction': '+',
+              'Beyond Blind Compliance: Benchmarking Task Verification in OCR Reasoning': '+',
+              'OCR-MetaReasoning Benchmark: Evaluating the Meta-Reasoning Ability of MLLMs in Text-Rich Image Understanding': '+',
+              'MMPCBench: Benchmarking Multimodal Large Language Models on Proactive Critique of Flawed Inputs': '+',
+              'How Robust is OCR-Reasoning? Evaluating OCR-Reasoning Robustness of Vision-Language Models under Visual Perturbations': '+',
+              'VCIFBench: Evaluating Complex Instruction Following for Video Understanding': '+',
+              'From Isolation to Alignment: Unified LoRA for Efficient Multi-Task Learning': '+',
           }
 
           def mark_yuan_in_segment(segment, marker):
