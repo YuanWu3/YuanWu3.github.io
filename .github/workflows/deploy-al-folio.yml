@@ -132,10 +132,12 @@ jobs:
               'SOS-LoRA: Static Orthogonal-Subspace Low-Rank Adaptation with Fixed Multi-Scale Scaling': '+',
               'A Survey of Retentive Network': '+',
               'AGGC: Adaptive Group Gradient Clipping for Stabilizing Large Language Model Training': '+',
+              'CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval': '+',
+              'What if LLMs Ate Their Words: Causal History Effects in Multi-Turn Interaction': '',
           }
 
           def mark_yuan_in_segment(segment, marker):
-              replacement = f'<strong>Yuan Wu</strong><sup>{marker}</sup>'
+              replacement = f'<strong>Yuan Wu</strong><sup>{marker}</sup>' if marker else '<strong>Yuan Wu</strong>'
               patterns = [
                   r'<em>\s*Yuan\s+Wu\s*</em>',
                   r'<i>\s*Yuan\s+Wu\s*</i>',
