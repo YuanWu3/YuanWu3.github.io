@@ -69,6 +69,10 @@ My group studies reliable, efficient, and trustworthy methods for building and e
 
 <div class="yuan-news-box" aria-label="News">
   <div class="yuan-news-item">
+    <div class="yuan-news-date">Nov, 2026</div>
+    <div class="yuan-news-text">2 papers have been accepted by WSDM 2027.</div>
+  </div>
+  <div class="yuan-news-item">
     <div class="yuan-news-date">Aug, 2026</div>
     <div class="yuan-news-text">6 papers have been accepted to EMNLP 2026.</div>
   </div>
